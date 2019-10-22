@@ -1,0 +1,85 @@
+
+  .img_f1{
+    float: left;
+    margin-right: 1200px;
+    margin-top: 1300px;
+    width:100px; height:100px; background:#990000; left:50px; top:100px; z-index:1;
+} 
+
+.pp1{
+  text-align: Left;
+  margin-right: 0%; margin-left: 50%;
+}
+
+.pp2{
+  background:  #ffffff;
+  text-align: Left;
+  margin-right: 0%; margin-left: 50%;
+}
+
+.hh1{
+  margin-right: 5%; 
+  margin-left: 50%;
+}
+
+.iimg{
+  height: 200px;
+  background: #eff2fe;
+}
+
+.hh2{
+  margin-right: 20%; 
+  margin-left: 5%;
+  vertical-align: top;
+}
+
+.hh3{
+  margin-right: 10%; 
+  margin-left: 45%;
+  text-align: Left;
+  vertical-align: top;
+}
+
+.hh5{
+  margin-right: 10%; 
+  margin-left: 15%;
+  text-align: Left;
+  vertical-align: top;
+}
+
+.hh4{
+  margin-right: 0%; 
+  margin-left: 45%;
+  text-align: Left;
+}
+
+.table1{
+  background:  #ffffff;
+  text-align: Left;
+}
+
+.img1{
+  float:left;
+  text-align: left;
+}
+
+.sh1{
+  float:left;
+  text-align: left;
+}
+
+footer{
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.img2 {
+  background-image: url("Prob.png");
+  position: absolute;
+  left: 67px;
+  top: 88px;
+  width: 443px;
+  height: 260px;
+  z-index: 6;
+}
+
