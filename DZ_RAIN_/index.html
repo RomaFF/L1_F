@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script language="JavaScript" type="text/javascript" src="D:\JavaScript\Rain_WEB\Train.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+    <script type="text/javascript">
+function Rain() {
+    var text = document.getElementsByTagName("input")[0];
+    var val=text.value;
+    var arr = val.split(',');
+    alert(arr);
+    alert(Pain(arr))
+}
+//document.getElementById("btn").onclick = Rain;
+    
+    </script>
+  </head>
+  <body>
+        <input type="text" size="40">
+        <button type="button" value="input" onclick="Rain()" >Жмакни</button>
+  </body>
+</html>
