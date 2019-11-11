@@ -1,0 +1,47 @@
+ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+   }
+
+   .button-1 {
+   position: absolute; 
+   top: 90px; 
+   left: 75px;
+   font-weight:bold;
+   }
+   .button-2 {
+   position: absolute; 
+   top: 120px; 
+   left: 75px;
+   font-weight:bold;
+   }
+   .button-3 {
+   position: absolute; 
+   top: 150px; 
+   left: 75px;
+   font-weight:bold;
+   }
+   .button-4 {
+   position: absolute; 
+   top: 180px; 
+   left: 75px;
+   font-weight:bold;
+   }
+   .button-5 {
+   position: absolute; 
+   top: 210px; 
+   left: 75px;
+   font-weight:bold;
+   }
+   .button-6 {
+   position: absolute; 
+   top: 240px; 
+   left: 75px;
+   font-weight:bold;
+   }
