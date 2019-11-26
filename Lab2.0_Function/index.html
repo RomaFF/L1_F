@@ -1,0 +1,91 @@
+<html>
+ <head>
+ </head>  
+ <body> 
+     <script>
+    function addSquares_zavd1(a, b) {
+          console.log(a+b);
+        }
+        addSquares_zavd1(5,6);
+
+        var addSquares_zavd2 = function(a, b){
+          console.log(a+b);
+        }
+        addSquares_zavd2(14,6);
+        
+        var addSquares_zavd3 = (a,b) => {return a+b}
+        console.log(addSquares_zavd3(5,8));
+
+        var addSquares_zavd2 = function(a, b){
+          console.log(a+b);
+        }
+
+          function zavd4() {
+              var sum = 0;
+              for(let i=0; i<arguments.length;i++)
+              {sum += arguments[i];}
+              return console.log(sum); 
+        }
+        zavd4(5,5,10,9);
+
+        function Zavd5(a,b) {
+        this.a = a;
+        this.b = b;
+        return a + b;
+        }
+        console.log(Zavd5(10,8));
+
+        function Zavd6 (a) {
+        return function (b) {return a + b; };
+        }
+        var Zavv6 = Zavd6(5);
+        console.log (Zavv6(10));
+
+        function Zavd7(x)
+        {
+            return(x > 0 ? x * Zavd7(x - 1) : 1)
+        }
+        console.log(Zavd7(5));
+
+        function Zavd8(x)
+        {
+            return console.log('Foctorial: ' + Zavd7(x));
+        }
+        Zavd8(10);
+
+//#9
+        var user = {
+        firstName: "John",
+        surname: "Cena",
+
+        get fullName() {
+          return this.firstName + ' ' + this.surname;
+        },
+
+        set fullName(value) {
+        var split = value.split(' ');
+        this.firstName = split[0];
+        this.surname = split[1];
+        }
+      };
+
+console.log( user.fullName ); 
+user.fullName = "Tot Samiy";
+console.log( user.firstName ); 
+console.log( user.surname ); 
+
+        
+
+        
+
+
+
+
+
+
+
+    </script>
+      
+
+ </body>
+</html>
