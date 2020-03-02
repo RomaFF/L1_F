@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form id = "form">
+    <input type="text" name="key" id="it"></input>
+    <input type="button" onclick = "add()" id="but" name="print" value="   Print   " />
+    </form>
+    <ol>
+    <div id="div">
+    </div>
+    </ol>
+    <script>
+      var item,lastItem,lastznach;
+        function add() {
+            var li;
+            var input =  document.getElementById("it").value;
+            var ols = document.getElementById('div').querySelectorAll('ol').length;
+            var ol = document.getElementById('ol');
+            var form = document.getElementById('form');
+            li = document.createElement("li");
+            li.innerText = input;
+            li.draggable = true;
+            if(document.getElementById("it").value.length > 0) {
+            div.appendChild(li);
+            document.getElementById("it").addEventListener("keyup", function(){
+            let inp = document.getElementById("it");                                  //
+            lastznach=inp.value;
+            })
+            form.reset();
+            }
+        }
+
+              div.addEventListener("mouseover", function(event) {  
+                let target = event.target;
+                if(target.tagName=="LI")
+                {
+                  let text = document.getElementById("it");
+                  text.value = target.innerText; 
+                }    
+                else return;
+              /*setTimeout(function() {
+                form.reset();
+              }, 1000); */                                    
+              });
+
+              div.addEventListener("mouseout", function(){
+                let inp = document.getElementById("it");
+                inp.value=lastznach;
+              })
+
+              div.addEventListener("dragstart", function(event) {
+                let target = event.target;
+                if(target.tagName!="LI")
+                {
+                    return;
+                }
+                item = target;
+              });
+
+              div.addEventListener("dragover", function(event) {
+                let target = event.target;
+                if(target.tagName!="LI")
+                {
+                    return;
+                }
+                lastItem = target;
+                event.preventDefault();
+              });
+              div.addEventListener("drop", function(event) {
+                event.preventDefault();
+                console.log(item, lastItem);
+                div.insertBefore(item,lastItem);
+              });
+    </script>
+  </body>
+</html>

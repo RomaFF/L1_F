@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+        <input type="button" onclick="alert('Hello!')" value="Hello">
+        <input type="button" id="gg" value="Press, kill me!">
+
+        <div id="div">
+        <input onclick="change(this)" type="button" id="1" value="1">
+        <input onclick="change(this)" type="button" id="2" value="2">
+        <input onclick="change(this)" type="button" id="3" value="3">
+        <input onclick="change(this)" type="button" id="4" value="4">
+        <input onclick="change(this)" type="button" id="5" value="5">
+        </div>
+
+    <script>
+       //2 
+       function one_kill()
+       {
+           alert("GG");
+           input.removeEventListener("click", one_kill);
+       }
+       let input = document.getElementById("gg");
+       input.addEventListener("click", one_kill);
+
+        //3
+        var color = 'yellow';
+        function change(id) {
+        id.style.background = color;
+        }
+</script>
+  </body>
+</html>
