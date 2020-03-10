@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <h1 id = "h1">Smila weather</h1>
+    <style type="text/css">
+        img {
+        width: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        table {
+         color: white;
+         border: 0px double #000;
+        }
+        th {
+            background: rgb(81, 209, 98); 
+            width: 700px;
+            padding: 15px;
+        }
+        td {
+         background: rgb(101, 80, 216); 
+         width: 700px;
+         padding: 15px;
+         text-align: center;
+        }
+       </style>
+</head>
+<body>
+    <table id = "table">
+        <tr>
+            <th>Date and Time</th>
+            <th>Temperature</th>
+            <th>Description</th>
+            <th>Wind Speed</th>
+            <th>Photo weather</th>
+        </tr>
+    </table>
+ 
+<script> 
+var h1 = document.getElementById("h1");
+var td = document.createElement("td");
+var tr = document.createElement("tr");
+var table = document.getElementById("table");
+//var td1 = document.getElementById("td1");
+fetch('http://api.openweathermap.org/data/2.5/forecast?q=Smila&appid=d81029a0acf74508d950b9c4307ce255&lang=ru')
+ .then(response => response.json())
+ .then(data => {
+    console.log(data);
+    
+    for(let i=0;i<20;i++)
+    {
+    td = document.createElement("td");
+    tr = document.createElement("tr");
+    table.appendChild(tr);
+    td.textContent=data.list[i].dt_txt;
+    tr.appendChild(td);
+    td = document.createElement("td");
+    td.textContent=Math.floor(data.list[i].main.temp-273,15) + "°";
+    tr.appendChild(td);
+    td = document.createElement("td");
+    td.textContent=data.list[i].weather[0].description;
+    tr.appendChild(td);
+    td = document.createElement("td");
+    td.textContent=data.list[i].wind.speed;
+    tr.appendChild(td);
+    td = document.createElement("td");
+    var img = document.createElement("img");
+    img.src = "images.png";
+    td.appendChild(img);
+    tr.appendChild(td);
+    }
+})
+
+</script>
+</body>
+</html>
+
